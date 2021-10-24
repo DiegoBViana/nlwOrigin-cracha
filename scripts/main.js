@@ -1,17 +1,18 @@
 const socials = {
   github: 'diegobviana',
+  linkedin: 'in/diegobgviana',
   youtube: 'channel/UCeBtOoNA_DDljva-cJpQo_g',
   facebook: 'diegobgviana',
-  instagram: 'diegobgviana',
-  twitter: 'diegobviana' //nem tenho
+  instagram: 'diegobgviana'
+  //twitter: 'diegobviana' //nem tenho
   //spotify: 'diego'
 }
 function setSocials() {
-  //Dessa forma da pra fazer para qualquer outra rede social que seja informada no objeto.
+  //Dessa forma da pra fazer para qualquer outra rede social que seja informada no objeto. Caso deseje adicionar outra rede social, basta colocar o arquivo do icone.svg na pasta images e adicionar a opção com o mesmo nome da imagem no objeto socials.
   for (let i = 0; i < Object.keys(socials).length; i++) {
     const element = Object.keys(socials)[i]
     const social = document.getElementById(element)
-    //caso queira adicionar outra rede social, basta colocar a imagem .svg na pasta imagens e adicionar a opção com o mesmo nome da imagem no objeto socials
+
     if (social == undefined) {
       const list = document.getElementById('socialLinks')
       list.insertAdjacentHTML(
